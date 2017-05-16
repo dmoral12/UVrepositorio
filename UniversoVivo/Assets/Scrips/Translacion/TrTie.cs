@@ -13,6 +13,7 @@ public class TrTie : MonoBehaviour {
     {      
         if (gazedAt){
             Texto.SetActive(true);
+            Texto.transform.Rotate(new Vector3(0f, 0f, 0f));
         }
         else {
             Texto.SetActive(false);

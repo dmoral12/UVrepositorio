@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TrMar2 : MonoBehaviour {
     public GameObject Sol;
-    public GameObject Texto;
+    public GameObject Texto,sonido;
     private bool gazedAt;
     // Use this for initialization
     void Start()
@@ -18,10 +18,12 @@ public class TrMar2 : MonoBehaviour {
         if (gazedAt)
         {
             Texto.SetActive(true);
+            sonido.SetActive(true);
         }
         else
         {
             Texto.SetActive(false);
+            sonido.SetActive(false);
             OrbitAround();
         }
     }

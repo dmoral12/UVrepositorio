@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TrMer2 : MonoBehaviour {
-    public GameObject Sol,Texto;
+    public GameObject Sol,Texto,sonido;
     private bool gazedAt;
     // Use this for initialization
     void Start () {
@@ -16,11 +16,13 @@ public class TrMer2 : MonoBehaviour {
         if (gazedAt)
         {
             Texto.SetActive(true);
+            sonido.SetActive(true);
         }
         else
         {
             Texto.SetActive(false);
             OrbitAround();
+            sonido.SetActive(false);
         }
     }
     void OrbitAround()

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TrTie2 : MonoBehaviour {
-    public GameObject Sol,Texto;
+    public GameObject Sol,Texto,sonido;
     private bool gazedAt;
 
     void Start () {}
@@ -12,9 +12,11 @@ public class TrTie2 : MonoBehaviour {
     {      
         if (gazedAt){
             Texto.SetActive(true);
+            sonido.SetActive(true);
         }
         else {
             Texto.SetActive(false);
+            sonido.SetActive(false);
             OrbitAround();
         }
     }

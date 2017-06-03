@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TrVen2 : MonoBehaviour {
-    public GameObject Sol,Texto;
+    public GameObject Sol,Texto,sonido;
     private bool gazedAt;
     // Use this for initialization
     void Start () {}
@@ -13,10 +13,12 @@ public class TrVen2 : MonoBehaviour {
         if (gazedAt)
         {
             Texto.SetActive(true);
+            sonido.SetActive(true);
         }
         else
         {
             Texto.SetActive(false);
+            sonido.SetActive(false);
             OrbitAround();
         }
     }
